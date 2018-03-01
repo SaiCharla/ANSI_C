@@ -7,12 +7,10 @@ main()
     int c, d;
 
     /*printf("%d", EOF);*/
-    c = getchar();
-    while (c != EOF){
+    while ((c=getchar()) != EOF){
         if (d != ' ')
             putchar(c);
         d = c;
-        c = getchar();
     }
 }
 
