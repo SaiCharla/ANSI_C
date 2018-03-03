@@ -10,7 +10,7 @@ main()
     char line[MAXLINE];
 
     while ((len = getline(line, MAXLINE)) > 0){
-        rmtrail(line, MAXLINE);
+        rmtrail(line,len);
         printf("%s", line);
     }
     return 0;
@@ -35,10 +35,10 @@ void rmtrail(char s[], int len)
     int i;
 
     for (i=len-2; i>=0 ; --i){
-        if ((s[i] != ' ') || (s[i] != '\t'))
-            break;
+        if ((s[i] == ' ') || (s[i] == '\t'))
+            s[i] = '.';
         else
-            s[i] = '\0';
+            break;
     }
 }
 
