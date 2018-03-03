@@ -19,7 +19,7 @@ main()
         }
     }
     if (max > 0)
-        printf("%s", longest);
+        printf("%s\nThe length of the line is %d\n", longest, max);
     return 0;
 }
 
